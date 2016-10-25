@@ -10,4 +10,14 @@ function tablica() {
     } else {
         dan.className = "zacrveni";
     }
+
+}
+// stvaranje slike 
+function uslikaj() {
+    document.querySelector(".upute").className = "nevidljiv";   // micanje uputa
+    html2canvas(document.querySelector(".container")).then(function(canvas) {
+        document.body.appendChild(canvas);
+      document.querySelector("canvas").className = "uslikano";
+    });
+   document.querySelector(".poruka").className = "poruka"; // pokazuje poruku sa uputama
 }

@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <style type="text/css">
-        body {
-            padding: 20px 0 80px 0;
-        }
-        
         table {
             margin-top: 20px;
             float: left;
@@ -69,6 +65,25 @@
         }
         /*============== skrivanje uputa ==================*/
         
+        .poruka {
+            -moz-animation: cssAnimation 0s ease-in 10s forwards;
+            -webkit-animation: cssAnimation 0s ease-in 10s forwards;
+            -o-animation: cssAnimation 0s ease-in 10s forwards;
+            animation: cssAnimation 0s ease-in 10s forwards;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            position: fixed;
+            float: right;
+            right: 10px;
+            top: 10px;
+            display: block;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 230px;
+            background: #ffd800;
+            font-weight: bold;
+        }
+        
         .upute {
             -moz-animation: cssAnimation 0s ease-in 10s forwards;
             -webkit-animation: cssAnimation 0s ease-in 10s forwards;
@@ -110,6 +125,19 @@
         .siva {
             color: #727171
         }
+        
+        .nevidljiv {
+            display: none;
+        }
+        
+        .uslikano {
+            border: 20px solid #ffd800;
+        }
+        
+        .container {
+            background: #fff;
+            padding: 50px 0;
+        }
     </style>
 </head>
 
@@ -117,7 +145,7 @@
 
     <div class="container">
         <div class="row">
-            <h2 class="sredina siva"> Apartments Ivanka - Proboj - booking calendar</h2>
+            <h2 class="sredina siva" onclick="uslikaj();"> Apartments Ivanka - Proboj - booking calendar</h2>
             <h4 class="sredina"><a href="http://apartmani-proboj.com">apartmani-proboj.com</a></h4>
         </div>
         <div class="upute">
@@ -125,6 +153,14 @@
             <br> - prvi dan - <strong>Shift</strong> + klik
             <br> - zadnji dan - <strong>Ctrl</strong> + klik
             <br> - poništavanje - <strong>Alt</strong> + klik
+            <br> - <strong class="crveni">za slikanje klikni na naslov</strong>
+        </div>
+
+        <div class="poruka nevidljiv">
+            <h4 class="sredina">Kalendar uslikan.</h4>
+            <p>
+                Skrolaj prema dolje i u žutom okviru ćeš vidjet sliku.
+                <br>Spremi je desnim klikom.</p>
         </div>
 
         <div class="row">
@@ -1366,12 +1402,14 @@
         <!-- apartman D -->
     </div>
     <!-- container -->
+    <!--<button class="uslikaj" onclick="uslikaj();">Uslikaj</button>-->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/html2canvas.js"></script>
     <script src="js/kalendar.js"></script>
 
 </html>

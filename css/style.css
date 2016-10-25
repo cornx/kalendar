@@ -1,0 +1,94 @@
+ table {
+     margin-top: 20px;
+     position: relative;
+     float: left;
+     margin-right: 20px;
+     text-align: center
+ }
+ 
+ #dani {
+     font-weight: bold;
+ }
+ 
+ td,
+ th {
+     padding: 4px;
+     text-align: center;
+     cursor: pointer
+ }
+ 
+ th {
+     border-bottom: 1px solid #ccc;
+     padding-bottom: 1px
+ }
+ 
+ .crveni {
+     color: red
+ }
+ 
+ .zacrveni {
+     background: red;
+     color: white;
+     font-weight: bold;
+ }
+ 
+ .zadnjiDan {
+     background: url("img/zadnjiDan.png");
+     background-position: center center!important;
+     text-shadow: 1px 1px 1px #444;
+     background-color: red;
+     color: white;
+     font-weight: bold;
+     box-shadow
+ }
+ 
+ .prviDan {
+     background: url("img/prviDan.png");
+     background-position: center center!important;
+     text-shadow: -1px -1px 1px #444;
+     background-color: red;
+     color: white;
+     font-weight: bold;
+ }
+ 
+ .mjesec {
+     margin: 30px 20px -10px 10px;
+ }
+ 
+ .apartman {
+     padding-left: 11%;
+     margin: 20px 0 0 0;
+ }
+
+/*============== skrivanje uputa ==================*/
+.upute {
+    -moz-animation: cssAnimation 0s ease-in 10s forwards;
+    -webkit-animation: cssAnimation 0s ease-in 10s forwards;
+    -o-animation: cssAnimation 0s ease-in 10s forwards;
+    animation: cssAnimation 0s ease-in 10s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+     position: fixed;
+    float: right;
+    right: 10px;
+    top: 10px;
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+       opacity: 0;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+        opacity: 0;
+    }
+}

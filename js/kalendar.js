@@ -1,4 +1,4 @@
-function tablica() {
+function kalendar() {
     var dan = window.event.target;
 
     if (event.shiftKey) {

@@ -10,7 +10,6 @@ function tablica() {
     } else {
         dan.className = "zacrveni";
     }
-
 }
 // stvaranje slike 
 function uslikaj() {

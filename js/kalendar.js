@@ -15,8 +15,11 @@ function tablica() {
 // funkcija za stvaranje slike 
 function uslikaj() {
     document.querySelector(".upute").className = "nevidljiv"; // micanje uputa
+    document.querySelector("#uputeBtn").className = "nevidljiv"; // micanje uputa
+    var slikaKalendara = document.querySelector(".slika-kalendara"); // micanje uputa
     html2canvas(document.querySelector(".container")).then(function(canvas) {
-        document.body.appendChild(canvas);
+        // document.body.appendChild(canvas);
+        slikaKalendara.append(canvas);
         document.querySelector("canvas").className = "uslikano";
     });
     document.querySelector(".poruka").className = "poruka"; // pokazuje poruku sa uputama
